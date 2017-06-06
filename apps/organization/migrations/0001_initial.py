@@ -38,7 +38,7 @@ class Migration(migrations.Migration):
                 ('fav_nums', models.IntegerField(default=0, verbose_name='\u6536\u85cf\u6570')),
                 ('image', models.ImageField(upload_to='org/%Y/%m', verbose_name='\u5c01\u9762\u56fe')),
                 ('address', models.CharField(max_length=150, verbose_name='\u673a\u6784\u5730\u5740')),
-                ('city', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='organization.CityDict', verbose_name='\u6240\u5728\u57ce\u5e02')),
+                ('city', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='apps.organization.CityDict', verbose_name='\u6240\u5728\u57ce\u5e02')),
             ],
             options={
                 'verbose_name': '\u8bfe\u7a0b\u673a\u6784',
@@ -57,7 +57,7 @@ class Migration(migrations.Migration):
                 ('fav_nums', models.IntegerField(default=0, verbose_name='\u6536\u85cf\u6570')),
                 ('click_nums', models.IntegerField(default=0, verbose_name='\u70b9\u51fb\u6570')),
                 ('add_time', models.DateTimeField(default=datetime.datetime.now, verbose_name='\u6dfb\u52a0\u65f6\u95f4')),
-                ('org', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='organization.CourseOrg', verbose_name='\u6240\u5c5e\u673a\u6784')),
+                ('org', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='apps.organization.CourseOrg', verbose_name='\u6240\u5c5e\u673a\u6784')),
             ],
             options={
                 'verbose_name': '\u8bb2\u5e08',

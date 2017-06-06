@@ -42,7 +42,7 @@ class Migration(migrations.Migration):
                 ('name', models.CharField(max_length=100, verbose_name='\u8d44\u6e90\u540d\u79f0')),
                 ('download', models.FileField(upload_to='course/resource/%Y/%m', verbose_name='\u8d44\u6e90\u6587\u4ef6')),
                 ('add_time', models.DateTimeField(default=datetime.datetime.now, verbose_name='\u6dfb\u52a0\u65f6\u95f4')),
-                ('course', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='courses.Course', verbose_name='\u8bfe\u7a0b')),
+                ('course', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='apps.courses.Course', verbose_name='\u8bfe\u7a0b')),
             ],
             options={
                 'verbose_name': '\u8bfe\u7a0b\u8d44\u6e90',
@@ -55,7 +55,7 @@ class Migration(migrations.Migration):
                 ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('name', models.CharField(max_length=100, verbose_name='\u7ae0\u8282\u540d')),
                 ('add_time', models.DateTimeField(default=datetime.datetime.now, verbose_name='\u6dfb\u52a0\u65f6\u95f4')),
-                ('course', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='courses.Course', verbose_name='\u8bfe\u7a0b')),
+                ('course', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='apps.courses.Course', verbose_name='\u8bfe\u7a0b')),
             ],
             options={
                 'verbose_name': '\u7ae0\u8282',
@@ -68,7 +68,7 @@ class Migration(migrations.Migration):
                 ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('name', models.CharField(max_length=100, verbose_name='\u89c6\u9891\u540d')),
                 ('add_time', models.DateTimeField(default=datetime.datetime.now, verbose_name='\u6dfb\u52a0\u65f6\u95f4')),
-                ('lesson', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='courses.Lesson', verbose_name='\u7ae0\u8282\u540d')),
+                ('lesson', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='apps.courses.Lesson', verbose_name='\u7ae0\u8282\u540d')),
             ],
             options={
                 'verbose_name': '\u89c6\u9891',
